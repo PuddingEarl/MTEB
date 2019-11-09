@@ -16,7 +16,7 @@ namespace MTEB.AssetFormFolder
         PictureBox selectedPictureBox = null;
         Game1 game;
 
-        public AssetLoadingForm(Game1 game)
+        public AssetLoadingForm(Game1 game) // <- is this standard for passing game info to forms? seems hilarously unsecure and inefficient.
         {
             InitializeComponent();
             string[] availableAssets = Directory.GetFiles("Resources", "*.png");

@@ -16,6 +16,8 @@ namespace MTEB.MappingClasses
         static public int IDCount = 0;
         public string name;
         public int internalID;
+        // A list of a list of tiles? I assume this represents the tiles on the map.
+        // Not really neccessary when the Tile class already has an X and Y value, which I assume represents its location on the map also
         public List<List<Tile>> XAxis = new List<List<Tile>>();
         public static Camera camera;
         public int[] cameraLocation = new int[2] { 0, 0 };
@@ -58,7 +60,7 @@ namespace MTEB.MappingClasses
         {
             if(currentMouse.LeftButton == ButtonState.Pressed && pastMouse.LeftButton == ButtonState.Released)
             {
-                foreach(List<Tile> givenList in XAxis)
+                foreach(List<Tile> givenList in XAxis) // a double foreach, oh boy we gonna learn events.
                 {
                     foreach(Tile tile in givenList)
                     {

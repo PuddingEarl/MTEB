@@ -13,6 +13,12 @@ namespace MTEB.LayersFormFolder
         public int position;
         public string name;
 
+        // Convert most variables in classes to value property format, as shown below.
+        // get and set can be configured to perform validation, calculations, call events, and throw errors.
+        // Allows for far more effecient interactions between objects.
+
+        public int Thing { get; set; }
+
         public Layer(int ID, int position, string name)
         {
             this.ID = ID;
